@@ -36,8 +36,8 @@ body {
 }
 
 .Maps {
-  width: 75%;
-  height: 440px;
+  width: 60%;
+  height: 300px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -90,7 +90,7 @@ body {
 }
 
 .satMap {
-  background-image: url(./Maps/satMap.png);
+  background-image: url(./Maps/IITG_MAP.jpg);
 }
 
 .outMap {
@@ -182,4 +182,194 @@ body {
 .projectDisplay:hover {
   background-color: #e9f5e1;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+.submitButton {
+  background-color: #4CAF50;
+  /* Green background */
+  color: white;
+  /* White text */
+  padding: 12px 24px;
+  /* Padding for size */
+  border: none;
+  /* Remove border */
+  border-radius: 8px;
+  /* Rounded corners */
+  cursor: pointer;
+  /* Pointer cursor on hover */
+  font-size: 16px;
+  /* Font size */
+  transition: background-color 0.3s ease;
+  /* Smooth transition */
+}
+
+.submitButton:hover {
+  background-color: #45a049;
+  /* Darker green on hover */
+}
+
+.submitButton:active {
+  background-color: #3e8e41;
+  /* Even darker green on click */
+}
+
+.submitButton:focus {
+  outline: none;
+  /* Remove outline on focus */
+}
+
+.pathResult {
+  background-color: #f9f9f9;
+  /* Light grey background */
+  border-radius: 10px;
+  /* Rounded corners */
+  padding: 20px;
+  /* Padding inside the box */
+  margin-top: 20px;
+  /* Space above the result */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow */
+  color: #333;
+  /* Dark text color */
+  font-family: 'Arial', sans-serif;
+  /* Font style */
+  max-width: 600px;
+  /* Maximum width for the result box */
+  margin-left: auto;
+  /* Center align */
+  margin-right: auto;
+  /* Center align */
+}
+
+.pathResult h2 {
+  color: #4CAF50;
+  /* Green color for the heading */
+  font-size: 24px;
+  /* Larger font size for the heading */
+  margin-bottom: 15px;
+  /* Space below the heading */
+}
+
+.pathResult p {
+  font-size: 16px;
+  /* Font size for the paragraph */
+  line-height: 1.6;
+  /* Line height for better readability */
+}
+
+.pathResult strong {
+  color: #333;
+  /* Bold text color */
+}
+
+.pathResult .error {
+  color: #e74c3c;
+  /* Red color for error message */
+}
+
+.modeForm {
+  margin-bottom: 15px;
+  /* Space between input fields */
+}
+
+.modeInput {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+.recentSearches ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.recentSearches li {
+  cursor: pointer;
+  padding: 5px;
+  background-color: #f0f0f0;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+.locationOption {
+  display: flex;
+  align-items: center;
+}
+
+.locationOption .favorite {
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.locationOption .favorite.active {
+  color: gold;
+}
+.formInput {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sourceForm,
+.destinationForm,
+.modeSelect {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+label {
+  font-weight: bold;
+  width: 100px;
+}
+
+select {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: #fff;
+}
+
+.starButton {
+  padding: 0 10px;
+  font-size: 24px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #ffbf00;
+}
+
+.starButton:hover {
+  color: #ff9f00;
+}
+
+button[type='submit'] {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button[type='submit']:hover {
+  background-color: #347d37;
 }

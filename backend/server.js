@@ -5,6 +5,77 @@ const app = express();
 app.use(cors());
 
 const PORT = 5000;
+const locationMap = {
+    "Main Gate": 1,
+    "Market Complex Circle": 2,
+    "D-Type Circle": 3,
+    "Serpentine Entrance via Market Complex": 4,
+    "Serpentine Entrance via Subhansiri": 5,
+    "Serpentine Entrance via Hospital": 6,
+    "New Guest House": 7,
+    "Hospital": 8,
+    "Married Scholar Gate 2": 9,
+    "Married Scholar Gate 1": 10,
+    "Biotech Park Road": 11,
+    "Dhansiri": 12,
+    "New Sac": 13,
+    "Swimming Pool Ground": 14,
+    "Central Gym": 15,
+    "Kameng Turn": 16,
+    "Kameng": 17,
+    "Manas": 18,
+    "Barak Turn": 19,
+    "Umiam/Barak": 20,
+    "Brahma Y Junction": 21,
+    "Khoka Market": 22,
+    "Dihing Gate": 23,
+    "Dihing Mess": 24,
+    "Brahma Gate": 25,
+    "Brahma Hostel": 26,
+    "Kapili": 27,
+    "Kapili Road": 28,
+    "Tapri": 29,
+    "Lohit Turn": 30,
+    "Lohit": 31,
+    "Old Sac Junction": 32,
+    "Old Sac Office": 33,
+    "Old Sac": 34,
+    "Subansiri Stop": 35,
+    "Subansiri": 36,
+    "F-Type Bus Stop": 37,
+    "Conference Circle": 38,
+    "Director's Bungalow": 39,
+    "Auditorium": 40,
+    "Conference Centre": 41,
+    "Cycle Shop": 42,
+    "Library Turn": 43,
+    "Library Entrance": 44,
+    "Bank": 45,
+    "Lecture Hall": 46,
+    "Core 1": 47,
+    "Academic Complex Cycle Stand": 48,
+    "Core 5 Road": 49,
+    "Mechanical Workshop": 50,
+    "Core 5": 51,
+    "Core 5 Entrance": 52,
+    "Core 2": 53,
+    "Core 3": 54,
+    "Core 2/3 Turn": 55,
+    "Hashtag": 56,
+    "Core 4 Junction": 57,
+    "Tea Stall Core 5": 58,
+    "Core 4": 59,
+    "Core 5 Road 2": 60,
+    "Core 5 Road 1": 61,
+    "Tea Stall Core 4": 62,
+    "Academic Complex Road": 63,
+    "KV Gate": 64
+};
+
+// Reverse map for converting numbers back to names
+const reverseLocationMap = Object.fromEntries(
+    Object.entries(locationMap).map(([key, value]) => [value, key])
+);
 
 const graph = {
     1: {2: 262},
@@ -73,8 +144,9 @@ const graph = {
 };
 
 app.get('/shortd/:a/:b', (req, res) => {
-    const a = parseInt(req.params.a);
-    const b = parseInt(req.params.b);
+    const a = locationMap[req.params.a];
+    const b = locationMap[req.params.b];
+    console.log("a, b: ", a, b);
     const dijkstra = (src, dst) => {
         const inf = Infinity;
         const n = 65;
@@ -120,9 +192,9 @@ app.get('/shortd/:a/:b', (req, res) => {
         }
 
         return {
-            from: src,
-            to: dst,
-            path: resultPath.reverse(),
+            from: reverseLocationMap[src],
+            to: reverseLocationMap[dst],
+            path: resultPath.reverse().map((node) => reverseLocationMap[node]),
             totalDis: distance[dst]
         };
     };
