@@ -29,21 +29,26 @@ IITG PathFinder is a full-stack web application designed to help users navigate 
 1. Navigate to the `backend` folder.
    ```bash
    cd backend
+   
 ### Install dependencies.
-   bash
    npm install
 
 ## Start the backend server.
 node app.js
 The backend server will be running at http://localhost:5000.
-Frontend Setup
+
+### Frontend Setup
+
 ## Navigate to the root directory.
 cd ..
+
 ## Install frontend dependencies.
 npm install
+
 ## Start the React frontend server.
 npm start
 The frontend will be running at http://localhost:3000.
+
 ## How It Works
 Select Source and Destination: Choose the source and destination locations from the dropdown menus.
 Choose Travel Mode: Select the desired travel mode (Walk, Cycle, Bike, Car).
