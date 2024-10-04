@@ -1,6 +1,6 @@
 # IITG PathFinder
 
-### Personal Project - [Visit Website](https://bit.ly/GithubPath)
+### Personal Project - [Visit Website](https://bit.ly/GithubPath](https://iitg-path-finder.vercel.app/)
 
 ### Overview
 IITG PathFinder is a full-stack web application designed to help users navigate the IIT Guwahati campus efficiently. The app calculates the shortest path and estimated travel time between 64 campus locations, supporting three travel modes: walking, cycling, and driving. Users can view recent searches, mark favorite locations, and switch between different travel modes. The project implements a weighted-undirected graph using an adjacency list representation and employs the Dijkstra Algorithm to find the optimal path between any two points.
