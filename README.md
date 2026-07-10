@@ -19,6 +19,7 @@ IITG PathFinder is a full-stack web application designed to help users navigate 
 - **Pathfinding Algorithm**: Dijkstra’s Algorithm is used to compute the shortest path between two points, considering travel mode constraints.
 - **Performance Improvement**: Reduced average path distance by 210m and travel time by 12% for the top 5 most frequently traveled routes.
 
+### Documentation Link : https://docs.google.com/document/d/1HOwYpX-3e7yzk7WnkwqBdmlE5xCMijLYOz38hk9yJko/edit?tab=t.0#heading=h.g83xylfmox91
 ### Installation and Setup
 #### Prerequisites
 - Node.js (v14 or higher)
